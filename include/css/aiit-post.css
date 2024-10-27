@@ -1,0 +1,30 @@
+.aiit-button {
+    margin-top: 10px !important;
+    width: 252px;
+    text-align: left;
+    padding-left: 25px !important;
+}
+
+.aiit-button.loading {
+    position: relative;
+}
+
+.aiit-button.loading:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 93%;
+    width: 13px;
+    height: 13px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ccc;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

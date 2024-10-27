@@ -1,0 +1,324 @@
+.total-images-container {
+    margin-top: 10px;
+    background-color: #e5e5e9;
+    padding-top: 19px;
+    padding-bottom: 22px;
+    text-align: center;
+    font-weight: normal;
+    border-radius: 4px;
+    color: #86868f;
+    border: 0px solid #e0e0e0;
+}
+
+#image-count {
+    color: #86868f; 
+    font-weight: bold;
+}
+
+.optimization-table-container {
+    margin-top: 20px;
+}
+
+.optimization-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.optimization-table th {
+    background-color: #e5e5e9;
+    text-align: left;
+    padding: 10px;
+    color: #86868f;
+    font-weight: normal;
+    border: 1px solid #d8d8d8;
+    font-size: 13px;
+}
+
+.optimization-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+#progress-container {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    background-color: #a3dba3;
+    border-radius: 4px;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #62c760; 
+    width: 0%; 
+    transition: width 0.5s ease-in-out; 
+}
+
+#percent-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: normal;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.smooth-height-transition {
+        transition: height 0.4s ease, opacity 0.4s ease;
+        overflow: hidden; 
+}
+
+#optimization-options {
+    width: 100%; 
+    padding-top: 4px; 
+    padding-bottom: 5px; 
+    padding-left: 13px; 
+    padding-right: 14px; 
+    background-color: #fff;
+    color: #333;
+}
+
+#optimization-options option {
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+#optimization-options:focus {
+    outline: none;
+    border-color: #007bff; 
+}
+
+.custom-dropdown {
+  position: relative;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #94969A;
+  border-radius: 4px;
+  width: -webkit-fill-available;
+  z-index: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 4px;
+
+}
+
+.dropdown-selected {
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 9px;
+    padding-bottom: 10px;
+    padding-left: 13px;
+    padding-right: 14px;
+    border: 1px solid #94969A;
+    border-radius: 4px;
+}
+
+.dropdown-option {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.dropdown-option:hover {
+    background-color: #eeeef1;
+    border-radius: 4px;
+}
+
+.option-title {
+    font-weight: 500;
+    color: #1E2327;
+    font-size: 14px;
+}
+
+.option-description {
+    font-size: 12px;
+    color: #87878F;
+}
+
+.selected-text {
+    color: #65696F;
+}
+
+.selected-text.selected {
+    color: #1E2327; 
+}
+
+.dropdown-caret {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    margin-top: 7px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    vertical-align: middle;
+}
+
+.custom-dropdown.open .dropdown-caret {
+    border-top: none;
+    border-bottom: 5px solid black;
+}
+
+.accordion h2 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+    padding-right: 30px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+
+}
+
+/* Interactive Feedback */
+.accordion h2:hover {
+    background-color: #F0F0F1;
+}
+
+/* Open/Closed State Indicator */
+.accordion h2:after {
+    content: '+';
+    float: right;
+    color: #94959A;
+    margin-top: -1px;
+}
+
+.accordion h2.active:after {
+    content: '-';
+    color: #94959A;
+}
+
+/* Basic styling for accordion content */
+.accordion div {
+    padding-top: 11px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 30px;
+    background-color: #fff;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    /* Other styles as needed */
+}
+
+/* Styling for content when it's open */
+.accordion h2.active + div {
+    background-color: #fff; /* Slightly different background for open content */
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    /* Additional styles for open state */
+}
+
+/* Round corners for the first accordion header */
+.accordion h2:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 0px;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* Round corners for the last accordion header */
+.accordion h2:nth-last-of-type(1) {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+/* Adjustments for the last header when active */
+.accordion h2.active:nth-last-of-type(1) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+}
+
+/* Styling for the content div following the last active header */
+.accordion h2.active:nth-last-of-type(1) + div {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+
+.loading-container {
+    display: inline-block;
+    position: absolute;
+    padding-left: 20px;   
+}
+
+.loading-container:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #ccc;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+}
+
+.posts-error-notification {
+    margin-top: 10px;
+    background-color: #e5e5e9;
+    padding-top: 19px;
+    padding-bottom: 22px;
+    text-align: center;
+    font-weight: normal;
+    border-radius: 4px;
+    color: #86868f;
+    border: 0px solid #e0e0e0;
+}
